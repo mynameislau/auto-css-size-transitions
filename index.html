@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+
+  html, body {
+    height: 100%;
+  }
+
+    .test {
+      height: 5px;
+      overflow: hidden;
+      width: 300px;
+      background: blue;
+      transition: height 1s, background 1s;
+      pointer-events: none;
+      -webkit-user-select: none;
+    }
+
+    @media (min-width: 500px) {
+      .test div {
+        display: inline-block;
+        width: 40%;
+      }
+    }
+
+    body[aria-expanded="true"] .test {
+      height: auto;
+      background: red;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="test" aria-expanded="false" data-auto-size-transitions="true">
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi quisquam ducimus laborum facere corrupti ipsa modi beatae, error neque quos at! Repudiandae cum neque itaque placeat enim accusantium, ducimus laudantium!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut illum minus magni architecto esse inventore necessitatibus voluptate omnis harum, quidem excepturi obcaecati expedita non cum laborum odio temporibus itaque. Id.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi quisquam ducimus laborum facere corrupti ipsa modi beatae, error neque quos at! Repudiandae cum neque itaque placeat enim accusantium, ducimus laudantium!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut illum minus magni architecto esse inventore necessitatibus voluptate omnis harum, quidem excepturi obcaecati expedita non cum laborum odio temporibus itaque. Id.
+    </div>
+  </div>
+</body>
+<script src="js/auto-size-transitions.min.js"></script>
+<script>
+   document.querySelector('body').addEventListener('click', event => {
+    var expanded = event.target.getAttribute('aria-expanded');
+    event.target.setAttribute('aria-expanded', expanded === 'true' ? 'false' : 'true');
+   });
+</script>
+</html>

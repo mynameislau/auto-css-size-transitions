@@ -1,0 +1,21 @@
+{
+  "name": "expand",
+  "description": "Changes the expanded state of a region, with the help of aria attributes",
+  "main": "lib/expand.js",
+  "authors": [
+    "Laurent Falda <mynameislau@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "expand"
+  ],
+  "moduleType": [],
+  "homepage": "https://github.com/mynameislau/expand",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
